@@ -6,6 +6,7 @@
 
 ## 문서
 
+- [서비스 개요서](docs/service-overview.md)
 - [제품 콘셉트 정리](docs/product-concept.md)
 - [Asteria 역기획서](docs/asteria-reverse-engineering.md)
 - [협업 로그](docs/collaboration-log.md)

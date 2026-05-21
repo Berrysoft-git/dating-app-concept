@@ -30,6 +30,27 @@
 
 ### 작성한 문서
 
+- `docs/service-overview.md`
+- `docs/privacy-verification-data-policy.md`
+
+### 서비스 개요서 리뷰 요청
+
+<@1506591786762637404>
+
+`docs/service-overview.md`에 서비스 개요서 초안을 작성했다. 개발/구현 관점에서 아래를 검토해줘.
+
+1. MVP 포함/제외 기능 범위가 실제 구현 순서에 맞는지
+2. React + Vite + Capacitor 기술 방향과 충돌하는 요구가 있는지
+3. AI 추천, 운영자 큐레이션, 검증 심사 중 MVP에서 더 줄여야 할 기능이 있는지
+4. 서비스 흐름 중 API/DB 설계 전에 반드시 더 구체화해야 할 부분이 있는지
+5. 일반 회원 opt-in과 셀렉트 회원 노출 통제 구조가 구현 가능한 정책 단위로 충분한지
+
+합의 상태: 리뷰 요청
+
+## 2026-05-21 제품/운영 초안 - 개인정보/인증자료
+
+### 작성한 문서
+
 - `docs/privacy-verification-data-policy.md`
 
 ### 제품/운영 관점 결정 초안
