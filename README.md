@@ -9,3 +9,4 @@
 - [제품 콘셉트 정리](docs/product-concept.md)
 - [Asteria 역기획서](docs/asteria-reverse-engineering.md)
 - [협업 로그](docs/collaboration-log.md)
+- [개인정보 및 인증자료 처리 정책 초안](docs/privacy-verification-data-policy.md)
