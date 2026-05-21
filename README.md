@@ -8,6 +8,7 @@
 
 - [서비스 개요서](docs/service-overview.md)
 - [PRD 제품 요구사항 문서](docs/prd.md)
+- [MVP 범위 정의서](docs/mvp-scope.md)
 - [제품 콘셉트 정리](docs/product-concept.md)
 - [Asteria 역기획서](docs/asteria-reverse-engineering.md)
 - [협업 로그](docs/collaboration-log.md)
