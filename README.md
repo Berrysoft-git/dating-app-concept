@@ -7,4 +7,4 @@
 ## 문서
 
 - [제품 콘셉트 정리](docs/product-concept.md)
-
+- [Asteria 역기획서](docs/asteria-reverse-engineering.md)
