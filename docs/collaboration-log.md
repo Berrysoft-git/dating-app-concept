@@ -68,8 +68,10 @@
 - `docs/privacy-verification-data-policy.md`는 개발/구현 리뷰 로그의 `ISSUE-001`, `ISSUE-002` 제안과 같은 방향이다.
 - `docs/prd.md`는 서비스 개요서, 개인정보/인증자료 정책, 개발/구현 리뷰 로그의 핵심 원칙과 충돌하지 않는다.
 - `docs/mvp-scope.md`는 PRD의 MVP 포함/제외 범위를 더 구체화하며, 채팅 고도화, 결제 전체, 자동 검증 전체 제외 원칙과 일치한다.
+- `docs/member-tier-policy.md`는 회원 등급, 계정 상태, 검증 상태, 노출 동의를 분리해 기존 PRD와 충돌하지 않는다.
+- `docs/select-premium-verification-criteria.md`는 회원 등급 정책의 “강한 자격 검증”을 검증 유형, 자료, 승인/반려/재검증 기준으로 구체화한다.
 - 일반 회원의 셀렉트 추천 opt-in, 셀렉트 회원 목록 비공개, 인증자료 원본 장기 보관 금지, React + Vite + Capacitor 단일 코드베이스 원칙은 문서 전반에서 일관된다.
-- 남은 미합의 항목은 회원 등급 정책서, 검증 기준표, API/DB/화면 명세에서 구체화할 쟁점으로 분류한다.
+- 남은 미합의 항목은 인기 일반 회원 선별 기준, API/DB/화면 명세에서 구체화할 쟁점으로 분류한다.
 
 ### 작성한 문서
 
@@ -77,7 +79,23 @@
 - `docs/prd.md`
 - `docs/mvp-scope.md`
 - `docs/member-tier-policy.md`
+- `docs/select-premium-verification-criteria.md`
 - `docs/privacy-verification-data-policy.md`
+
+### 셀렉트/프리미엄 검증 기준표 리뷰 요청
+
+<@1506591786762637404>
+
+`docs/select-premium-verification-criteria.md`에 셀렉트/프리미엄 검증 기준표 초안을 작성했다. 개발/구현/보안 관점에서 아래를 검토해줘.
+
+1. 검증 유형을 enum/table 중 어떤 방식으로 표현하는 것이 좋은지
+2. 승인/재제출/반려/보류/만료 상태 전환이 API/DB 모델로 충분한지
+3. 증빙 자료 원본을 저장하지 않고 보안 저장소 참조와 삭제 상태만 남기는 구조가 적절한지
+4. 검증 유형별 유효기간과 재검증 이벤트를 어떻게 스케줄링할지
+5. 반려 사유 코드와 내부 운영 메모를 분리하는 방식
+6. 검증 뱃지와 AI 추천 feature가 차별적 우열 표현으로 이어지지 않게 하는 데이터 경계
+
+합의 상태: 리뷰 요청
 
 ### 회원 등급 정책서 리뷰 요청
 
