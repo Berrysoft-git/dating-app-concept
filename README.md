@@ -19,3 +19,46 @@
 - [Asteria 역기획서](docs/asteria-reverse-engineering.md)
 - [협업 로그](docs/collaboration-log.md)
 - [개인정보 및 인증자료 처리 정책 초안](docs/privacy-verification-data-policy.md)
+
+## Coordination Notes
+
+Use this short task split before the next cross-check.
+
+### Agent A: Codex Runtime
+
+Scope:
+- `agent/transports/codex_app_server.py`
+- `tests/agent/transports/test_codex_app_server_runtime.py`
+
+Tasks:
+- Document why Codex binary resolution must handle Windows npm shims such as
+  `codex.CMD`, `.bat`, and `.exe`.
+- Confirm `CodexAppServerClient` and `check_codex_binary()` use the same
+  resolver contract.
+- Keep tests portable by checking the resolved executable basename instead of
+  requiring `cmd[0] == "codex"`.
+
+### Agent B: Gateway and Discord
+
+Scope:
+- `gateway/platforms/base.py`
+- `gateway/platforms/discord.py`
+- Discord auto-thread and background task cancellation/drain tests.
+
+Tasks:
+- Document why fire-and-forget message tasks need a done callback that logs
+  unexpected failures.
+- Confirm expected cancellations are not logged as task failures.
+- Confirm Discord auto-thread creation starts a typing indicator without
+  changing the response routing target.
+- Confirm auto-thread creation failure falls back to the original channel and
+  emits a useful warning.
+
+### Cross-Check Criteria
+
+- `git diff --check` passes.
+- `ruff check` passes on the touched Python files.
+- Targeted gateway and Codex tests pass.
+- No change should treat normal cancellation as an error.
+- No change should route a Discord auto-thread response back to the parent
+  channel after a thread was created.
